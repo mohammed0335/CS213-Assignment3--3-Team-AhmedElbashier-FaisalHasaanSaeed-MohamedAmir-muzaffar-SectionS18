@@ -96,7 +96,7 @@ public:
     Player<char>** setup_players() override {
         Player<char>** players = new Player<char>*[2];
 
-        cout << "\n=== 5x5 Tic Tac Toe ===" << endl;
+        cout << "\n== 5x5 Tic Tac Toe ===" << endl;
 
         cout << "\nChoose Player 1 type:" << endl;
         cout << "1. Human" << endl;
@@ -149,5 +149,6 @@ void run5x5Game() {
     game.run();
     delete board; delete ui; delete players[0]; delete players[1]; delete[] players;
 }
+
 
 #endif
