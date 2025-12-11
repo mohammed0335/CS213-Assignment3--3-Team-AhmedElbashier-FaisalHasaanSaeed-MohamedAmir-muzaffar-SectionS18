@@ -37,6 +37,7 @@ public:
     }
 };
 
+
 class FiveXFive_Board : public Board<char> {
 public:
     FiveXFive_Board() : Board<char>(5, 5) {
@@ -75,6 +76,7 @@ public:
     bool is_draw(Player<char>* player) override { return n_moves == 25; }
     bool game_is_over(Player<char>* player) override { return is_win(player) || is_draw(player); }
 };
+
 
 class FiveXFive_UI : public UI<char> {
 public:
@@ -140,6 +142,7 @@ public:
     }
 };
 
+
 void run5x5Game() {
     system("cls");
     FiveXFive_Board* board = new FiveXFive_Board();
@@ -152,3 +155,4 @@ void run5x5Game() {
 
 
 #endif
+
