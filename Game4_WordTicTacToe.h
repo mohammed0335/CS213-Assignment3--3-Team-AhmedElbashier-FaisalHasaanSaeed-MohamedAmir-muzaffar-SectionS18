@@ -23,13 +23,13 @@ public:
         Board<char>* board = this->get_board_ptr();
         vector<vector<char>> b = board->get_board_matrix();
 
-        // محاولة إيجاد حركة تصنع كلمة
+            
         for(int i=0;i<3;i++) {
             for(int j=0;j<3;j++) {
                 if(b[i][j] == ' ') {
-                    // تجربة أحرف مختلفة
+                    
                     for(char letter='A'; letter<='Z'; letter++) {
-                        // تحقق إذا كانت الحركة ستكون صحيحة
+                        
                         if(isValidMove(i,j,letter)) {
                             cout << this->get_name() << " (AI) plays at (" << i << "," << j << ") with letter '" << letter << "'" << endl;
                             return new Move<char>(i,j,letter);
@@ -39,7 +39,7 @@ public:
             }
         }
 
-        // إذا لم يجد كلمة، حركة عشوائية
+        
         for(int i=0;i<3;i++) {
             for(int j=0;j<3;j++) {
                 if(b[i][j] == ' ') {
@@ -55,8 +55,8 @@ public:
 
 private:
     bool isValidMove(int x, int y, char letter) {
-        // دالة بسيطة للتحقق من صحة الحركة
-        return true; // في الواقع تحتاج تحقق من القاموس
+           
+        return true; 
     }
 };
 
@@ -166,5 +166,6 @@ void runWordGame() {
     game.run();
     delete board; delete ui; delete players[0]; delete players[1]; delete[] players;
 }
+
 
 #endif
