@@ -44,7 +44,7 @@ int main() {
     int choice;
 
     cout << "Welcome to CS213 Gaming Application\n";
-    cout << "Team: 20220621, 20220681, 20220791, 20220995\n";
+    cout << "Team: 20220621,20220995 20220681, 20220791,\n";
 
     do {
         displayMenu();
